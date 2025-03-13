@@ -3,78 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/file.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>Photo Editor</title>
+    <title>Загрузка фото</title>
 </head>
 <body>
-    <div class="photo">
-        <img src="2A4A6784.JPG" alt="My favorite photoset">
+    <div class="download">
+        <input type="file" name="photo" id="photo" class="photo">
+        <label for="photo" class="photoLabel">Загрузите Ваше фото <span></span></label>
     </div>
-    <div class="controls">
-        <div class="blur">
-            <label for="blur">Размытие</label>
-            <div>0<input type="range" name="blur" id="blur" min="0" max="10" step="1" value="0">10</div>
-            <output>0 px</output>
-        </div>
-        <div class="brightness">
-            <label for="brightness">Яркость</label>
-            <div>0%<input type="range" name="brightness" id="brightness" min="0" max="300" value="100" step="10">300%</div>
-            <output>100%</output>
-        </div>
-        <div class="contrast">
-            <label for="contrast">Контраст</label>
-            <div>0%<input type="range" name="contrast" id="contrast" min="0" max="300" value="100" step="10">100%</div>
-            <output>100%</output>
-        </div>
-        <!-- <div class="shadow">
-            <div class="shadowSize">
-                <label for="shadowSize">Размер тени </label>
-                <div> 0px<input type="number" name="shadowSize" id="shadowSize" min="0" max="5" step="1">5px</div>
-            </div>
-            <div class="shadowBlur">
-                <label for="shadowBlur">Размытие тени </label>
-                <div> 0px<input type="number" name="shadowBlur" id="shadowBlur" min="0" max="5" step="1">5px</div>
-            </div>
-            <div class="shadowColor">
-                <label for="shadowColor">Цвет тени</label>
-                <div><input type="color" name="shadowColor" id="shadowColor" value="#bb96cf"></div>
-            </div>
-        </div> -->
-        <div class="grayscale">
-            <label for="grayscale">Черно-белый фильтр</label>
-            <div>0%<input type="range" name="grayscale" id="grayscale" min="0" max="100" step="10" value="0">100%</div>
-            <output>0%</output>
-        </div>
-        <div class="hue-rotate">
-            <label for="hue-rotate">Поиграть с цветами</label>
-            <div>0<sup>o</sup><input type="range" name="hue-rotate" id="hue-rotate" min="0" max="360" step="1" value="0">360<sup>o</sup></div> 
-            <output>0<sup>o</sup></output>
-        </div>
-        <div class="invert">
-            <label for="invert">Негатив</label>
-            <div>0%<input type="range" name="invert" id="invert" min="0" max="100" value="0">100%</div>
-            <output>0%</output>
-        </div>
-        <div class="opacity">
-            <label for="opacity">Прозрачность</label>
-            <div>0%<input type="range" name="opacity" id="opacity" min="0" max="100" value="100">100%</div>
-            <output>100%</output>
-        </div>
-        <div class="saturate">
-            <label for="saturate">Насыщенность</label>
-            <div>0%<input type="range" name="saturate" id="saturate" min="0" max="300" value="100" step="10">300%</div>
-            <output>100%</output>
-        </div>
-        <div class="sepia">
-            <label for="sepia">Сепия</label>
-            <div>0%<input type="range" name="sepia" id="sepia" min="0" max="100" step="10" value="0">100%</div>
-            <output>0%</output>
-        </div>
-    </div>
-    <script src="index.js"></script>
+    <script src="../js/file.js"></script>
 </body>
 </html>
