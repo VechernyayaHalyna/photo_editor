@@ -14,9 +14,12 @@
     <title>Фоторедактор</title>
   </head>
   <body>
-    <div class="photo">
-      <img src="../img/2A4A6784.JPG" alt="My favorite photoset" />
-    </div>
+    <template id="photo">
+      <div class="photo">
+        <img src="" alt="My favorite photoset" id="uploaded-photo" />
+      </div>
+    </template>
+    <div id="editor-content"></div>
     <div class="controls">
       <div class="blur">
         <label for="blur">Размытие</label>
@@ -29,9 +32,11 @@
             max="10"
             step="1"
             value="0"
+            data-filter="blur"
+            class="control"
           />10px
         </div>
-        <output>0 px</output>
+        <output data-filter="blur">0 px</output>
       </div>
       <div class="brightness">
         <label for="brightness">Яркость</label>
@@ -44,9 +49,11 @@
             max="300"
             value="100"
             step="10"
+            data-filter="brightness"
+            class="control"
           />300%
         </div>
-        <output>100%</output>
+        <output data-filter="brightness">100%</output>
       </div>
       <div class="contrast">
         <label for="contrast">Контраст</label>
@@ -59,9 +66,11 @@
             max="300"
             value="100"
             step="10"
+            data-filter="contrast"
+            class="control"
           />100%
         </div>
-        <output>100%</output>
+        <output data-filter="contrast">100%</output>
       </div>
       <!-- <div class="shadow">
             <div class="shadowSize">
@@ -88,9 +97,11 @@
             max="100"
             step="10"
             value="0"
+            data-filter="grayscale"
+            class="control"
           />100%
         </div>
-        <output>0%</output>
+        <output data-filter="grayscale">0%</output>
       </div>
       <div class="hue-rotate">
         <label for="hue-rotate">Поиграть с цветами</label>
@@ -104,9 +115,11 @@
             max="360"
             step="1"
             value="0"
+            data-filter="hue-rotate"
+            class="control"
           />360<sup>o</sup>
         </div>
-        <output>0<sup>o</sup></output>
+        <output data-filter="hue-rotate">0<sup>o</sup></output>
       </div>
       <div class="invert">
         <label for="invert">Негатив</label>
@@ -118,9 +131,11 @@
             min="0"
             max="100"
             value="0"
+            data-filter="invert"
+            class="control"
           />100%
         </div>
-        <output>0%</output>
+        <output data-filter="invert">0%</output>
       </div>
       <div class="opacity">
         <label for="opacity">Прозрачность</label>
@@ -132,9 +147,11 @@
             min="0"
             max="100"
             value="100"
+            data-filter="opacity"
+            class="control"
           />100%
         </div>
-        <output>100%</output>
+        <output data-filter="opacity">100%</output>
       </div>
       <div class="saturate">
         <label for="saturate">Насыщенность</label>
@@ -147,9 +164,11 @@
             max="300"
             value="100"
             step="10"
+            data-filter="saturate"
+            class="control"
           />300%
         </div>
-        <output>100%</output>
+        <output data-filter="saturate">100%</output>
       </div>
       <div class="sepia">
         <label for="sepia">Сепия</label>
@@ -162,12 +181,15 @@
             max="100"
             step="10"
             value="0"
+            data-filter="sepia"
+            class="control"
           />100%
         </div>
-        <output>0%</output>
+        <output data-filter="sepia">0%</output>
       </div>
     </div>
-    <script src="../js/index.js"></script>
+    <button class="reset-btn">Сбросить фильтры</button>
+    <script type="module" src="../js/index.js"></script>
     <script src="../js/file.js"></script>
   </body>
 </html>
