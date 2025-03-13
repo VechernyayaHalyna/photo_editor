@@ -27,6 +27,8 @@
 //     }
 // });
 
+console.log("JS файл загружен");
+
 let input = document.querySelector('.photo');
 
 input.addEventListener('change', (event) => {
