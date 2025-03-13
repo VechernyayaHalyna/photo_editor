@@ -77,7 +77,7 @@ input.addEventListener('change', (event) => {
                     localStorage.setItem("uploadedImage", compressedImage);
                     if (localStorage.getItem("uploadedImage")) {
                         console.log("Изображение сохранено");
-                        window.location.href = '../page/editor.html';
+                        window.location.href = '../../page/editor.html';
                     } else {
                         console.error("Ошибка сохранения изображения в localStorage");
                     }
